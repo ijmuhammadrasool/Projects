@@ -16,11 +16,16 @@
   <style>
     * {
       margin: auto;
-
       color: green;
       font-family: Noto Sans;
       font-weight: bolder;
       text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      body{
+        margin-top: 50%;
+      }
     }
 
     .allProcessing {
@@ -37,6 +42,20 @@
       padding: 57px;
     }
 
+    @media (max-width: 600px) {
+      .allProcessing {
+        margin: auto;
+        margin-top: 40px;
+        grid-template-columns: repeat(5, 1fr);
+        width: 80%;
+        column-gap: 5px;
+        row-gap: 10px;
+        padding: 10px;
+        border-radius: 3px;
+        
+      }
+    }
+
     a {
       box-shadow: rgba(67, 93, 50, 0.25) 0px 50px 100px -20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -44,6 +63,14 @@
       font-size: larger;
       padding: 15px;
       border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
+      a {
+        border-radius: 3px;
+        font-size: 8px;
+        padding: 5px;
+      }
     }
 
     a:hover {
@@ -62,6 +89,17 @@
       color: black;
       cursor: pointer;
       margin-bottom: 25px;
+    }
+
+    @media (max-width: 600px) {
+      .count {
+        border-radius: 3px;
+        font-size: 8px;
+        padding: 5px;
+        width: 39%;
+        bottom: 290px;
+        margin-left: 110px;
+      }
     }
   </style>
 </head>
