@@ -22,9 +22,9 @@
       text-decoration: none;
     }
 
-    @media (max-width: 900px) {
-      body {
-        margin-top: 50%;
+    @media (max-width: 360px) {
+      header {
+        margin-top: 25%;
       }
     }
 
@@ -42,16 +42,17 @@
       padding: 57px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 360px) {
       .allProcessing {
         margin: auto;
-        margin-top: 40px;
-        grid-template-columns: repeat(5, 1fr);
+        margin-top: 30px;
+        grid-template-columns: repeat(2, 1fr);
         width: 80%;
-        column-gap: 5px;
-        row-gap: 10px;
-        padding: 10px;
-        border-radius: 3px;
+        column-gap: 0px;
+        row-gap: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        column-fill: auto;
 
       }
     }
@@ -65,11 +66,11 @@
       border-radius: 5px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 360px) {
       a {
-        border-radius: 3px;
-        font-size: 8px;
-        padding: 5px;
+        margin: auto;
+        border-radius: 5px;
+        padding: 10px;
       }
     }
 
@@ -91,14 +92,19 @@
       margin-bottom: 25px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 360px) {
       .count {
-        border-radius: 3px;
-        font-size: 8px;
-        padding: 5px;
-        width: 41%;
-        bottom: 154px;
-        margin-left: 150px;
+        margin: auto;
+        border-radius: 5px;
+        padding: 3px;
+        width: 53%;
+        bottom: -324px;
+        margin-left: 120px;
+        font-size: 10px;
+      }
+      .count2{
+        margin: auto;
+        margin-left: -30px;
       }
     }
   </style>
@@ -166,7 +172,7 @@
     // Format the date
     const formattedDate = endDate.toLocaleDateString('en-US', options);
 
-    document.getElementById("count").innerHTML = (`&copy; 13-06-2024 Developed By Muhammad Rasool. All Rights Reserved. Present: ${formattedDate}.<p class = "count"> Developed Passed ${countDate.months} Months ${countDate.days} Days.</P>`);
+    document.getElementById("count").innerHTML = (`<p class = "count2">&copy; 13-06-2024 Developed By Muhammad Rasool. All Rights Reserved. Present: ${formattedDate}.<p class = "count"> Developed Passed ${countDate.months} Months ${countDate.days} Days.</P>`);
   </script>
 
 </body>
