@@ -24,7 +24,7 @@
 
     @media (max-width: 360px) {
       header {
-        margin-top: 10%;
+        margin-top: 5%;
       }
     }
 
@@ -82,7 +82,7 @@
     .count {
       position: absolute;
       bottom: 15px;
-      margin-left: 57.50%;
+      margin-left: 57%;
       font-size: medium;
       padding: 2.50px 10px;
       border-radius: 5px;
@@ -94,17 +94,13 @@
 
     @media (max-width: 360px) {
       .count {
-        margin: auto;
         border-radius: 5px;
         padding: 3px;
-        width: 53%;
-        bottom: -203px;
-        margin-left: 120px;
-        font-size: 10px;
-      }
-      .count2{
-        margin: auto;
-        margin-left: -30px;
+        width: 75%;
+        margin-bottom: -230px;
+        margin-left: 0px;
+        font-size: 14px;
+        text-align: center;
       }
     }
   </style>
@@ -172,7 +168,7 @@
     // Format the date
     const formattedDate = endDate.toLocaleDateString('en-US', options);
 
-    document.getElementById("count").innerHTML = (`<p class = "count2">&copy; 13-06-2024 Developed By Muhammad Rasool. All Rights Reserved. Present: ${formattedDate}.<p class = "count"> Developed Passed ${countDate.months} Months ${countDate.days} Days.</P>`);
+    document.getElementById("count").innerHTML = (`&copy; 13-06-2024 Developed By Muhammad Rasool. All Rights Reserved. Present: ${formattedDate}.<p class = "count"> Developed Passed ${countDate.months} Months ${countDate.days} Days.</P>`);
   </script>
 
 </body>
