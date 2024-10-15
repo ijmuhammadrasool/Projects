@@ -16,18 +16,11 @@
   <style>
     * {
       margin: 0 auto;
-      padding: 0 auto;
+      padding: 0;
       color: green;
       font-family: Noto Sans;
       font-weight: bolder;
       text-decoration: none;
-    }
-
-    @media (max-width: 360px) {
-      * {
-        margin: 0 auto;
-        padding: 0 auto;
-      }
     }
 
     .allProcessing {
@@ -94,15 +87,27 @@
       .count {
         border-radius: 5px;
         padding: 3px;
-        width: 75%;
-        margin-bottom: -140px;
-        margin-left: 0px;
-        font-size: 14px;
+        width: 61%;
+        margin-bottom: -582px;
+        margin-left: 105px;
+        font-size: 12px;
         text-align: center;
       }
 
       .count2 {
-        margin-bottom: 50px;
+        padding-bottom: 20px;
+      }
+    }
+
+    footer {
+      margin-top: 50px;
+      margin-left: 10%;
+    }
+
+    @media (max-width: 360px) {
+      footer {
+        margin-top: 30px;
+        margin-left: 5%;
       }
     }
   </style>
@@ -136,7 +141,7 @@
     <a href="#">Processing</a>
   </div>
 
-  <footer style="margin-top: 50px; margin-left: 10%;">
+  <footer>
     <p id="count"></p>
   </footer>
 
