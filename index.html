@@ -15,7 +15,8 @@
 
   <style>
     * {
-      margin: auto;
+      margin: 0 auto;
+      padding: 0 auto;
       color: green;
       font-family: Noto Sans;
       font-weight: bolder;
@@ -23,8 +24,9 @@
     }
 
     @media (max-width: 360px) {
-      header {
-        margin-top: 5%;
+      * {
+        margin: 0 auto;
+        padding: 0 auto;
       }
     }
 
@@ -44,16 +46,12 @@
 
     @media (max-width: 360px) {
       .allProcessing {
-        margin: auto;
-        margin-top: 30px;
         grid-template-columns: repeat(2, 1fr);
-        width: 80%;
-        column-gap: 0px;
-        row-gap: 20px;
-        padding: 20px;
         border-radius: 5px;
-        column-fill: auto;
-
+        width: 80%;
+        column-gap: 10px;
+        row-gap: 10px;
+        padding: 20px;
       }
     }
 
@@ -97,10 +95,14 @@
         border-radius: 5px;
         padding: 3px;
         width: 75%;
-        margin-bottom: -230px;
+        margin-bottom: -140px;
         margin-left: 0px;
         font-size: 14px;
         text-align: center;
+      }
+
+      .count2 {
+        margin-bottom: 50px;
       }
     }
   </style>
@@ -168,7 +170,7 @@
     // Format the date
     const formattedDate = endDate.toLocaleDateString('en-US', options);
 
-    document.getElementById("count").innerHTML = (`&copy; 13-06-2024 Developed By Muhammad Rasool. All Rights Reserved. Present: ${formattedDate}.<p class = "count"> Developed Passed ${countDate.months} Months ${countDate.days} Days.</P>`);
+    document.getElementById("count").innerHTML = (`<p class = "count2"> &copy; 13-06-2024 Developed By Muhammad Rasool. All Rights Reserved. Present: ${formattedDate}.<p class = "count"> Developed Passed ${countDate.months} Months ${countDate.days} Days.</P>`);
   </script>
 
 </body>
