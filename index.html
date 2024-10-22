@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <title>Home</title>
+
+  <style>
+    * {
+      margin: 0 auto;
+      padding: 0;
+      color: green;
+      font-family: Noto Sans;
+      font-weight: bolder;
+      text-decoration: none;
+    }
+
+    .allProcessing {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-radius: 10px;
+      box-shadow: rgba(67, 93, 50, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(23, 64, 10, 0.35) 0px -2px 6px 0px inset;
+      width: 57%;
+      margin-top: 25px;
+      column-gap: 20px;
+      row-gap: 20px;
+      padding: 57px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .allProcessing {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 5px;
+        width: 80%;
+        column-gap: 10px;
+        row-gap: 10px;
+        padding: 20px;
+      }
+    }
+
+    a {
+      box-shadow: rgba(67, 93, 50, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(23, 64, 10, 0.35) 0px -2px 6px 0px inset;
+      font-size: larger;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    @media screen and (max-width: 600px) {
+      a {
+        margin: auto;
+        border-radius: 5px;
+        padding: 10px;
+      }
+    }
+
+    a:hover {
+      background-color: green;
+      color: white;
+    }
+
+    .count {
+      position: absolute;
+      bottom: 15px;
+      margin-left: 57%;
+      font-size: medium;
+      padding: 2.50px 10px;
+      border-radius: 5px;
+      background-color: #2cbc63;
+      color: black;
+      cursor: pointer;
+      margin-bottom: 25px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .count {
+        position: absolute;
+        border-radius: 5px;
+        padding: 3px;
+        width: 65%;
+        bottom: -95px;
+        margin-left: 50px;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      .count2 {
+        font-size: 13px;
+      }
+    }
+
+    footer {
+      margin-top: 50px;
+      margin-left: 10%;
+    }
+
+    @media screen and (max-width: 600px) {
+      footer {
+        margin-top: 30px;
+        margin-left: 5%;
+        margin-bottom: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 style="margin-top: 20px; text-align: center;">Projects</h1>
+  </header>
+
+  <div class="allProcessing">
+    <a href="Portfolio.html">Portfolio</a>
+    <a href="Project1.html">Project 1</a>
+    <a href="HtmlCssJs.html">Practice</a>
+    <a href="Notes-App.html">Notes App</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+    <a href="#">Processing</a>
+  </div>
+
+  <footer>
+    <p id="count"></p>
+  </footer>
+
+  <script>
+    function count(date1, date2) {
+      let years = date2.getFullYear() - date1.getFullYear();
+      let months = date2.getMonth() - date1.getMonth();
+      let days = date2.getDate() - date1.getDate();
+
+      // Adjust months and years if days are negative
+      if (days < 0) {
+        months--;
+        const lastMonth = new Date(date2.getFullYear(), date2.getMonth(), 0);
+        days += lastMonth.getDate(); // Add the days from the last month
+      }
+
+      if (months < 0) {
+        years--;
+        months += 12; // Adjust months to be positive
+      }
+
+      return { years, months, days };
+    }
+    const startDate = new Date('2024-06-13');
+    const endDate = new Date();
+    const countDate = count(startDate, endDate);
+
+    // Define options for toLocaleDateString
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' };
+
+    // Format the date
+    const formattedDate = endDate.toLocaleDateString('en-US', options);
+
+    document.getElementById("count").innerHTML = (`<p class = "count2"> &copy; 13-06-2024 Developed By Muhammad Rasool. All Rights Reserved. Present: ${formattedDate}.<p class = "count"> Developed Passed ${countDate.months} Months ${countDate.days} Days.</P>`);
+  </script>
+
+</body>
+
+</html>

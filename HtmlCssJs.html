@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="HtmlCssJs.css">
+    <script defer src="HtmlCssJs.js"></script>
+
+    <title>HtmlCssJs</title>
+</head>
+
+<body>
+    <header>
+        <h1>Html Css JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li id="bgcrch">Change Background Color</li>
+            </ul>
+        </nav>
+    </header><br>
+
+    <div class="container">
+        <div class="wordchange">
+            <h2>Name Change</h2><br>
+            <h2 id="titleo">Hello World</h2>
+            <h2 id="titlet">Hello World</h2><br>
+        </div><br>
+
+        <div class="wordchange2">
+            <h2>Name Change</h2><br>
+            <h2 id="titletwo">Hello World</h2><br>
+            <input type="button" id="btn" class="btn" onclick="change()" value="Change">
+            <br><br>
+        </div><br>
+
+        <div class="calculator">
+            <h2>Calculator</h2><br>
+            <p id="result"><br><br></p><br>
+            <input id="num1"><br><br>
+            <input id="num2"><br><br>
+            <button onclick="add()">+</button>
+            <button onclick="subtract()">-</button>
+            <button onclick="multiply()">*</button>
+            <button onclick="divide()">/</button><br><br>
+            <br><br>
+
+        </div><br>
+
+        <div class="guess">
+            <h3>Guess The Number From 1 to 10</h3><br><br>
+            <input id="gnum" onkeydown="enter1(event)" placeholder="Enter Number"><br><br>
+            <button id="reset" onclick="reset()">Reset</button>
+            <button onclick="check()">Check</button><br><br>
+            <p id="result1">You are right/wrong</p><br>
+            <p id="tscore">Score: 10</p><br>
+        </div><br>
+
+        <div class="event">
+            <h2 id="ready">Ready</h2><br>
+            <div class="readycoloum">
+            <button onclick="update(event)">One</button>
+            <button onclick="update(event)">Two</button>
+            <button onclick="update(event)">Three</button>
+            <button onclick="update(event)">Four</button>
+            <button onclick="update(event)">Five</button>
+            <button onclick="update(event)">Six</button>
+            <button onclick="update(event)">Seven</button>
+            <button onclick="update(event)">Eight</button>
+            <button onclick="update(event)">Nine</button>
+            <br><br></div>
+        </div><br>
+
+        <div class="delete">
+            <h4>Click To Delete</h4> <br>
+            <input type="button" class="btn3" onclick="d(event)" value="One"><br>
+            <input type="button" class="btn3" onclick="d(event)" value="Two"><br>
+            <input type="button" class="btn3" onclick="d(event)" value="Three">
+        </div><br>
+
+        <div class="todolist">
+            <h3>TO Do List</h3><br>
+            <input placeholder="Add To Do List" class="type" onkeydown="enter2(event)">
+            <button onclick="addtodo()" class="add">Add</button>
+        </div>
+
+        
+        <div class="adddecres" id="adddecres">
+            <label id="label">0</label><br><br>
+            <button id="dec">Decrease</button>
+            <button id="res">Reset</button>
+            <button id="inc">Increase</button>
+        </div>
+
+    </div>
+
+    <footer>&copy; 23-08-2024 Developed By Muhammad Rasool. All Rights Reserved.</footer>
+
+</body>
+
+</html>

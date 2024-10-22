@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-weight: 750;
+    text-decoration: none;
+    font-family: Noto Sans;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 50px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        margin: 20px;
+        display: block;
+        font-size: 13px;
+
+    }
+}
+
+nav {
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li {
+    font-size: medium;
+    padding: 2.50px 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li {
+        font-size: 13px;
+    }
+}
+
+nav ul li:hover {
+    background-color: #2cbc63;
+    color: black;
+}
+
+a {
+    font-size: medium;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    a {
+        font-size: 10px;
+    }
+}
+
+a:hover {
+    background-color: #2cbc63;
+    color: black;
+}
+
+body {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.button {
+    border: none;
+    background-color: #2cbc63;
+    color: black;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+button:hover {
+    background-color: #2cbc63;
+    color: black;
+}
+
+footer {
+    position: relative;
+    bottom: -20px;
+    padding: 10px;
+}
+
+.wordchange,
+.wordchange2,
+.calculator,
+.guess,
+.event,
+.delete,
+.todolist,
+.randomletter,
+.adddecres {
+    /* height: 2%; */
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 30px;
+    width: 25%;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .wordchange,
+    .wordchange2,
+    .calculator,
+    .guess,
+    .event,
+    .delete,
+    .todolist,
+    .randomletter,
+    .adddecres {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .add {
+        margin-top: 20px;
+    }
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn3 {
+    border: none;
+    font-size: 15px;
+    background-color: transparent;
+}
+
+.btn3:hover {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#label {
+    display: block;
+    font-size: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    #label {
+        font-size: 100px;
+    }
+
+    #dec,
+    #inc,
+    #res {
+        width: 30%;
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+.readycoloum {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
